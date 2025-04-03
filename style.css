@@ -27,7 +27,7 @@
 }
 
 .botao {
-    background-color: #4CAF50;
+    background-color: #ff3c00;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -36,14 +36,14 @@
 }
 
 .botao:hover {
-    background-color: #3e8e41;
+    background-color: #00f7ff;
 }
 
 .igual {
-    background-color: #2196F3;
+    background-color: #000000;
     color: #fff;
 }
 
 .igual:hover {
-    background-color: #1A73BA;
+    background-color: #8400ff;
 }
