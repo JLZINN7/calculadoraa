@@ -1,67 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Calculadora</title>
- <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
- <div class="calculadora">
- <input type="text" id="display" disabled>
- <div class="botões">
- <button id="btn-7" class="botao-azul">7</button>
- <<!DOCTYPE html>
- <html lang="pt-BR">
- <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculadora</title>
-  <link rel="stylesheet" href="style.css">
- </head>
- <body>
-  <div class="calculadora">
-  <input type="text" id="display" disabled>
-  <div class="botões">
-  <button id="btn-7" class="botao-azul">7</button>
-  <button id="btn-8" class="botao-azul">8</button>
-  <button id="btn-9" class="botao-azul">9</button>
-  <button id="btn-dividir" class="botao-vermelho">/</button>
-  <button id="btn-4" class="botao-azul">4</button>
-  <button id="btn-5" class="botao-azul">5</button>
-  <button id="btn-6" class="botao-azul">6</button>
-  <button id="btn-multiplicar" class="botao-vermelho">*</button>
-  <button id="btn-1" class="botao-azul">1</button><!DOCTYPE html>
-  <html lang="pt-BR">
-  <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Calculadora</title>
-   <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-   <div class="calculadora">
-   <input type="text" id="display" disabled>
-   <div class="botões">
-   <button id="btn-7" class="botao-azul">7</button>
-   <button id="btn-8" class="botao-azul">8</button>
-   <button id="btn-9" class="botao-azul">9</button>
-   <button id="btn-dividir" class="botao-vermelho">/</button>
-   <button id="btn-4" class="botao-azul">4</button>
-   <button id="btn-5" class="botao-azul">5</button>
-   <button id="btn-6" class="botao-azul">6</button>
-   <button id="btn-multiplicar" class="botao-vermelho">*</button>
-   <button id="btn-1" class="botao-azul">1</button>
-   <button id="btn-2" class="botao-azul">2</button>
-   <button id="btn-3" class="botao-azul">3</button>
-   <button id="btn-subtrair" class="botao-vermelho">-</button>
-   <button id="btn-0" class="botao-azul">0</button>
-   <button id="btn-ponto" class="botao-azul">.</button>
-   <button id="btn-igual" class="botao-vermelho">=</button>
-   <button id="btn-somar" class="botao-vermelho">+</button>
-   <button id="btn-c" class="botao-vermelho">C</button>
-   </div>
-   </div>
-   <script src="script.js"></script>
-  </body>
-  </html>
+    <div class="calculadora">
+        <input type="text" id="visor" disabled>
+        <div class="botoes">
+            <button class="botao" onclick="limpar()">C</button>
+            <button class="botao" onclick="backspace()">DEL</button>
+            <button class="botao" onclick="adicionarValor('%')">%</button>
+            <button class="botao" onclick="adicionarValor('/')">/</button>
+            <button class="botao" onclick="adicionarValor('7')">7</button>
+            <button class="botao" onclick="adicionarValor('8')">8</button>
+            <button class="botao" onclick="adicionarValor('9')">9</button>
+            <button class="botao" onclick="adicionarValor('*')">*</button>
+            <button class="botao" onclick="adicionarValor('4')">4</button>
+            <button class="botao" onclick="adicionarValor('5')">5</button>
+            <button class="botao" onclick="adicionarValor('6')">6</button>
+            <button class="botao" onclick="adicionarValor('-')">-</button>
+            <button class="botao" onclick="adicionarValor('1')">1</button>
+            <button class="botao" onclick="adicionarValor('2')">2</button>
+            <button class="botao" onclick="adicionarValor('3')">3</button>
+            <button class="botao" onclick="adicionarValor('+')">+</button>
+            <button class="botao" onclick="adicionarValor('0')">0</button>
+            <button class="botao" onclick="adicionarValor('.')">.</button>
+            <button class="botao igual" onclick="calcular()">=</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

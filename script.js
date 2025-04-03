@@ -1,43 +1,28 @@
-const display = document.getElementById('display');
-const botões = document.querySelectorAll('.botões button');
-
+let visor = document.getElementById('visor');
 let valorAtual = '';
-let valorAnterior = '';
-let operação = '';
 
-botões.forEach(botão => {
- botão.addEventListener('click', () => {
- const valorBotão = botão.textContent;
-
- if (valorBotão === 'C') {
- valorAtual = '';
- valorAnterior = '';
- operação = '';
- display.value = '';
- } else if (valorBotão === '=') {
- calcular();
- } else if (['+', '-', '*', '/'].includes(valorBotão)) {
- operação = valorBotão;
- valorAnterior = valorAtual;
- valorAtual = '';
- } else {
- valorAtual += valorBotão;
- display.value = valorAtual;
- }
- });
-});
+function adicionarValor(valor) {
+    valorAtual += valor;
+    visor.value = valorAtual;
+}
 
 function calcular() {
- let resultado;
+    try {
+        let resultado = eval(valorAtual);
+        visor.value = resultado;
+        valorAtual = resultado.toString();
+    } catch (e) {
+        visor.value = 'Erro';
+        valorAtual = '';
+    }
+}
 
- switch (operação) {
- case '+':
- resultado = parseFloat(valorAnterior) + parseFloat(valorAtual);
- break;
- case '-':
- resultado = parseFloat(valorAnterior) - parseFloat(valorAtual);
- break;
- case '*':
- resultado = parseFloat(valorAnterior) * parseFloat(valorAtual);
- break;
- case '/':
+function limpar() {
+    valorAtual = '';
+    visor.value = '';
+}
+
+function backspace() {
+    valorAtual = valorAtual.slice(0, -1);
+    visor.value = valorAtual;
+}
